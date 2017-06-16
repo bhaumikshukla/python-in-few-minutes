@@ -49,7 +49,7 @@ def learntypes():
 
 	# Feeling bliss as we have these types too
 	d = {} # initializing dict type of var
-	d = { "name1": "John", "class": "B", "marks": 87} # or initializing with values
+	d = { "name1": "John", "class": "B", "marks": 87 } # or initializing with values
 
 	l = [] # initializing list type of var
 	l = [1,2,3,4,5,6,7,8,9,0] # initializing with values
@@ -238,7 +238,7 @@ def learnhttprequest():
 	print response.info()
 
 	# similarly, we can use 'requests'
-	import requests
+	import requests # you would need requests, install requests by 'pip install requests'
 	r = requests.get('http://python.org/')
 	print r.status_code
 
@@ -271,10 +271,36 @@ def learnfile():
 	row1 = ["Alpha", "22", "6ft"]
 	a.append(row)
 	a.append(row1)
-	with open('thecsvfile.csv', 'wb') as csvfile:
+	with open('thecsvfile.csv', 'wb') as csvfile: # 'with' it will keep file open and does the following jobs
 	    spamwriter = csv.writer(csvfile)
 	    for each in a:
 	    	spamwriter.writerow(each)
+
+	# now, learn try- catch
+	learntrycatch()
+
+def learntrycatch():
+
+	# here, loop continues till it gets the right input
+	while True:
+		try:
+			# Taking the input and parsing it to number, it gives ValueError if the input is text or non-numerical.
+			num = int(raw_input("Please enter a number, I'm learning try_catch: "))
+			
+			print "Thank you, I received a number"
+			# here, now check if number is positive single digit then only it is allowed else raise exception 
+			if num > 10 or num < 0:
+				print "Number is not valid, it has to be >0 and <10"
+				# Forcefully raising the ValueError as the number seems invalid here
+				raise ValueError("Invalid number`")
+
+			print "Number worked fine."
+			# on correct input, it will break out from this loop
+			break
+		except ValueError:
+			print "Hey, I asked for a valid number, please try again"
+
+
 
 # starting the program
 learnfunction()
