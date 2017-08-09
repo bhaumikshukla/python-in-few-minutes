@@ -1,5 +1,5 @@
 # Learn python in few minutes (Tutorial)
-learn-python.py this file contains all the code which are necessary to understand to start with python. It has all the necessary definitions for variables, types, functions and many best practices.
+learn-python.py this file contains all the code which are necessary to understand & to start with python. It has all the necessary definitions for variables, types, functions and many best practices to kick-start the basic programming with python.
 
 You would need
 * Python 2.7
